@@ -27,7 +27,9 @@
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
+    "@popperjs/core": "^2.6.0",
     "axios": "^0.21.1",
+    "bootstrap": "^5.0.0-beta1",
     "bulma": "^0.9.1",
     "chart.js": "^2.9.4",
     "css-loader": "^5.0.1",

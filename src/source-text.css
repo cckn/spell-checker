@@ -1,0 +1,13 @@
+.textarea__source {
+  height: 100vh;
+}
+
+.textarea__dist::placeholder {
+  color: black;
+}
+.textarea__dist {
+}
+
+.textarea__dist::placeholder {
+  color: black;
+}
