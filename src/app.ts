@@ -1,13 +1,9 @@
-import "./app.css";
-import "./source-text.css";
-
-import { txt } from "./txt";
-
-const dictionary: { lint: string; replace: string }[] = [];
-dictionary.push({ lint: "쫌", replace: "조금" });
-dictionary.push({ lint: "쪼끔", replace: "조금" });
-dictionary.push({ lint: "니", replace: "네" });
-dictionary.push({ lint: "니가", replace: "네가" });
+import "./css/app.css";
+import "./css/grid.css";
+import "./css/toast.css";
+import "./css/source-text.css";
+import { dictionary } from "./dict";
+import { copyToClipboard, toast } from "./utils";
 
 const template = (line: number, lint: string, replace: string) =>
   `#${line} ${lint} -> (${lint})/(${replace})`;
@@ -19,13 +15,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const $dist: HTMLTextAreaElement | null = document.querySelector(
     ".textarea__dist"
   );
+  const $text__count: HTMLParagraphElement | null = document.querySelector(
+    ".text__count"
+  );
+  const $btn__copy: HTMLButtonElement | null = document.querySelector(
+    ".btn__copy"
+  );
 
-  if ($src && $dist) {
+  if ($src && $dist && $text__count && $btn__copy) {
     $src.addEventListener("keyup", (e) => {
       console.log(e);
       console.log($src.innerText);
 
-      $dist.innerHTML = fix($src.value).join("\n");
+      const result = fix($src.value);
+
+      $dist.innerHTML = result.join("\n");
+      $text__count.innerText = result.length.toString();
+    });
+
+    $btn__copy?.addEventListener("click", () => {
+      if ($dist) {
+        copyToClipboard($dist?.value);
+        toast(`${$text__count.innerText} 줄이 복사됐습니다."`, 2000);
+      }
     });
   }
 });

@@ -11,3 +11,15 @@
 .textarea__dist::placeholder {
   color: black;
 }
+
+.grid__button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.count {
+}
+
+.btn__copy {
+  width: 15rem;
+}

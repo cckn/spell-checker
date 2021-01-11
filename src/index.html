@@ -19,6 +19,8 @@
     <link rel="icon" href="/assets/favicon.png" />
   </head>
   <body>
+    <div id="toast" class="alert alert-info" role="alert"></div>
+
     <section class="">
       <div class="grid">
         <div class="grid__textarea card">
@@ -35,10 +37,15 @@
           <textarea
             class="form-control textarea__dist"
             id="floatingTextarea"
-            style="height: 80vh"
+            style="height: 90vh"
           ></textarea>
         </div>
-        <div class="grid__button"></div>
+        <div class="grid__button">
+          <p class="fs-1 text__count">0</p>
+          <button type="button" class="btn btn-primary btn-lg btn__copy">
+            복사하기
+          </button>
+        </div>
       </div>
     </section>
   </body>
