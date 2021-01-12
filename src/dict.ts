@@ -4,6 +4,8 @@ const dictionary: { lint: string; replace: string }[] = [
   { lint: "쪼금", replace: "조금" },
   { lint: "쪼끔씩", replace: "조금씩" },
   { lint: "쪼금씩", replace: "조금씩" },
+  { lint: "쪼끔만", replace: "조금만" },
+  { lint: "쪼금만", replace: "조금만" },
   { lint: "니", replace: "네" },
   { lint: "니가", replace: "네가" },
   { lint: "니는", replace: "너는" },

@@ -9,6 +9,14 @@ const template = (line: number, lint: string, replace: string) =>
   `#${line} ${lint} -> (${lint})/(${replace})`;
 
 document.addEventListener("DOMContentLoaded", () => {
+  dictionary.forEach((dict) => {
+    console.log(
+      `${" ".repeat(10 - dict.lint.length * 2)}${dict.lint}  ->  ${
+        dict.replace
+      }`
+    );
+  });
+
   const $src: HTMLTextAreaElement | null = document.querySelector(
     ".textarea__source"
   );
@@ -24,9 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if ($src && $dist && $text__count && $btn__copy) {
     $src.addEventListener("keyup", (e) => {
-      console.log(e);
-      console.log($src.innerText);
-
       const result = fix($src.value);
 
       $dist.innerHTML = result.join("\n");
