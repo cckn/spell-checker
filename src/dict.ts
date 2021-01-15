@@ -15,15 +15,14 @@ const dictionary: { lint: string; replace: string }[] = [
   { lint: "할라면은", replace: "하려면은" },
   { lint: "할려면은", replace: "하려면은" },
 
-  { lint: "같애도", replace: "같아도" },
-  { lint: "같애서", replace: "같아서" },
-  { lint: "같애요", replace: "같아요" },
-  { lint: "같애요.", replace: "같아요." },
-
   { lint: "고런", replace: "그런" },
+  { lint: "요런", replace: "이런" },
+
   { lint: "그러고", replace: "그리고" },
   { lint: "그르케", replace: "그렇게" },
+
   { lint: "이러케", replace: "이렇게" },
+  { lint: "이르케", replace: "이렇게" },
 ];
 
 export { dictionary };
