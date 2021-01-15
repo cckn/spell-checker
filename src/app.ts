@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
       $dist.innerHTML = result.join("\n");
       $text__count.innerText = result.length.toString();
     });
+    $src.addEventListener("change", (e) => {
+      const result = fix($src.value);
+
+      $dist.innerHTML = result.join("\n");
+      $text__count.innerText = result.length.toString();
+    });
 
     $btn__copy?.addEventListener("click", () => {
       if ($dist) {
