@@ -23,6 +23,16 @@ const dictionary: { lint: string; replace: string }[] = [
 
   { lint: "이러케", replace: "이렇게" },
   { lint: "이르케", replace: "이렇게" },
+
+  { lint: "하드만", replace: "하더만" },
+  { lint: "많드만", replace: "많더만" },
+  { lint: "낫드만", replace: "낫더만" },
+  { lint: "있드만", replace: "있더만" },
+
+  { lint: "하드라구요", replace: "하더라고요" },
+  { lint: "했드라구요", replace: "했더라고요" },
+  { lint: "낫드라구요", replace: "낫더라고요" },
+  { lint: "있드라구요", replace: "있더라고요" },
 ];
 
 export { dictionary };
