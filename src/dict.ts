@@ -12,6 +12,7 @@ const dictionary: { lint: string; replace: string }[] = [
 
   { lint: "할라고", replace: "하려고" },
   { lint: "할려고", replace: "하려고" },
+  { lint: "볼려고", replace: "보려고" },
   { lint: "할라면은", replace: "하려면은" },
   { lint: "할려면은", replace: "하려면은" },
 
